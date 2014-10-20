@@ -14,7 +14,7 @@ drawpad = Canvas(root, width=800,height=600, background='white')
 drawpad.grid(row=0, column=0)
 
 # Create the oval
-circle = drawpad.create_oval(10, 10, 50, 50, fill='green')
+circle = drawpad.create_oval(10, 10, 90, 90, fill='green')
 direction = 1
 # Create our animation function
 def animate():
@@ -26,7 +26,7 @@ def animate():
     elif x1 < 0:
         direction = 1
     #Move our oval object by the value of direction
-    drawpad.move(circle,direction,0)
+    drawpad.move(circle,5 * direction,0)
     # Wait for 1 millisecond, then recursively call our animate function
     drawpad.after(1, animate)
 
